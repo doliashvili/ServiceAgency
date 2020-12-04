@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Application.deps.json
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Application.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ref\ServiceAgency.Application.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Application.pdb
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.csprojAssemblyReference.cache
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.AssemblyInfo.cs
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ref\ServiceAgency.Application.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.pdb
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Domain.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Infrastructure.dll
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Infrastructure.pdb
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\bin\Debug\net5.0\ServiceAgency.Domain.pdb
+C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Application\obj\Debug\net5.0\ServiceAgency.Application.csproj.CopyComplete
