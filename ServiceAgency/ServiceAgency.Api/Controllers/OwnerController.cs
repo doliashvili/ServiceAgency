@@ -16,7 +16,7 @@ namespace ServiceAgency.Api.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> AddOwnerAsync(OwnerInputDto ownerInputDto)
+        public async Task<IActionResult> AddOwnerAsync([FromBody]OwnerInputDto ownerInputDto)
         {
             await _ownerService.AddOwnerAsync(ownerInputDto);
             return Ok();

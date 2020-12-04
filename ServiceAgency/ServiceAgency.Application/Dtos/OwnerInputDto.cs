@@ -18,7 +18,5 @@ namespace ServiceAgency.Application.Dtos
         [Required]
         [MaxLength(50)]
         public string PrivateNumber { get; set; }
-        [Required]
-        public bool IsActive { get; set; }
     }
 }

@@ -5674,11 +5674,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Api\\ServiceAgency.Api.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Api\\ServiceAgency.Api.csproj",
       "projectName": "ServiceAgency.Api",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Api\\ServiceAgency.Api.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Api\\ServiceAgency.Api.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Api\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5698,11 +5698,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj"
+            "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj"
             },
-            "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj"
+            "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj"
             }
           }
         }

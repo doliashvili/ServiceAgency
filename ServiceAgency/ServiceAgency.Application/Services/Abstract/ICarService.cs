@@ -16,9 +16,9 @@ namespace ServiceAgency.Application.Services.Abstract
         Task UpdateCarOwnerAsync(ChangeCarOwner changeCarOwner);
         Task UpdateCarTransportNumberAsync(ChangeCarTransportNumber changeCarNumber);
         Task RemoveCarAsync(int id);
-        Task<CarOutputDto> GetCarByIdAsync(int id);
-        Task<(IEnumerable<CarOutputDto>, int)> GetSearchedCarsAsync(SearchCars query);
-        Task<(IEnumerable<CarOutputDto>, int)> GetCarsAsync(GetCars query);
+        Task<CarOutputDto> GetCarByIdAsync(int id,string lang);
+        Task<(IEnumerable<CarOutputDto>, int)> GetSearchedCarsAsync(SearchCars query,string lang);
+        Task<(IEnumerable<CarOutputDto>, int)> GetCarsAsync(GetCars query,string lang);
         Task<(CarOwnersOutputDto, int)> GetCarOwners(GetCarOwners query);
     }
 }

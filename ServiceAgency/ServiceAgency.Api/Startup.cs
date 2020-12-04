@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ServiceAgency.Api.Middlewares;
+using ServiceAgency.Api.Swagger;
 using ServiceAgency.Application.Services.Abstract;
 using ServiceAgency.Application.Services.Concrete;
 using ServiceAgency.Domain.Repository;
@@ -44,6 +45,7 @@ namespace ServiceAgency.Api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServiceAgency.Api", Version = "v1" });
+                c.OperationFilter<LangHeaderRequirementsOperationFilter>();
             });
         }
 

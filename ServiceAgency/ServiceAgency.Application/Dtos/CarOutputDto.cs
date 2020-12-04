@@ -9,10 +9,8 @@ namespace ServiceAgency.Application.Dtos
 {
     public class CarOutputDto
     {
-        public string MarkGeo { get; set; }
-        public string MarkEng { get; set; }
-        public string ModelGeo { get; set; }
-        public string ModelEng { get; set; }
+        public string Mark { get; set; }
+        public string Model { get; set; }
         public string VinCode { get; set; }
         public string TransportNumber { get; set; }
         public DateTime CreatedDate { get; set; }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
       "projectName": "ServiceAgency.Domain",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Domain\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

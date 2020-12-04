@@ -20,17 +20,17 @@ namespace ServiceAgency.Application.Services.Concrete
             _baseRepository = baseRepository;
         }
 
-        public async Task AddOwnerAsync(OwnerInputDto ownerInputDto)
+        public async Task<int> AddOwnerAsync(OwnerInputDto ownerInputDto)
         {
             var ownerEntity = new Owner
             {
                 FirstName = ownerInputDto.FirstName,
-                IsActive = ownerInputDto.IsActive,
                 LastName = ownerInputDto.LastName,
                 PrivateNumber = ownerInputDto.PrivateNumber
             };
 
             await _baseRepository.AddAsync(ownerEntity);
+            return ownerEntity.Id;
         }
 
         public async Task DeleteOwnerAsync(int id)

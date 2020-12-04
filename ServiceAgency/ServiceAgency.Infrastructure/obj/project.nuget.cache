@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sISqYPYB/qD7XnZT3NC80SmXegU8EACsmfNSTXYlqD3aDHFI53fwVZ+nnfsAgcb+nTzMvYV+Nym14/5I4GQe5Q==",
+  "dgSpecHash": "VX4Lcy1BHEBr3I6egI0rMNG7VFrZKDjmBJAt4UnKpSiUhmNLqRjWeN4+1ml/3Tl/jYX2Oy7MgVFIohW7JSFlIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

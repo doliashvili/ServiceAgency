@@ -20,21 +20,24 @@ namespace ServiceAgency.Api.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetCarsAsync(GetCars query)
         {
-            var result = await _carService.GetCarsAsync(query);
+            var lang = LangCode;
+            var result = await _carService.GetCarsAsync(query,lang);
             return Ok(new { pageResult = result.Item1, pageCount = result.Item2 });
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetSearchedCarsAsync(SearchCars query)
         {
-            var result = await _carService.GetSearchedCarsAsync(query);
+            var lang = LangCode;
+            var result = await _carService.GetSearchedCarsAsync(query,lang);
             return Ok(new { pageResult = result.Item1, pageCount = result.Item2 });
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetCarByIdAsync(int id)
         {
-            var result = await _carService.GetCarByIdAsync(id);
+            var lang = LangCode;
+            var result = await _carService.GetCarByIdAsync(id,lang);
             return Ok(result);
         }
 
@@ -92,5 +95,7 @@ namespace ServiceAgency.Api.Controllers
 
             return BadRequest();
         }
+
+        protected string LangCode => HttpContext.Request.Headers["Accept-Language"];
     }
 }

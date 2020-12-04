@@ -20,8 +20,7 @@ namespace ServiceAgency.Infrastructure.Data.ModelConfigs
             builder.Property(x => x.MarkGeo).HasMaxLength(20);
             builder.HasIndex(x => new { x.CreatedDate, x.ModelEng, x.MarkEng, x.VinCode });
 
-
-            builder.HasMany(x => x.Owners);
+            builder.HasMany(x => x.Owners).WithMany(x=> x.Cars);
             builder.HasOne(x => x.Color);
             builder.HasOne(x => x.Fuel);
         }

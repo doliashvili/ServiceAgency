@@ -9,7 +9,7 @@ namespace ServiceAgency.Application.Services.Abstract
 {
     public interface IOwnerService 
     {
-        Task AddOwnerAsync(OwnerInputDto ownerInputDto);
+        Task<int> AddOwnerAsync(OwnerInputDto ownerInputDto);
         Task DeleteOwnerAsync(int id);
     }
 }

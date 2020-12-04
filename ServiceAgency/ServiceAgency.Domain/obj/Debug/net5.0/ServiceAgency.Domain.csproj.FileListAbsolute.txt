@@ -10,3 +10,15 @@ C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\S
 C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ref\ServiceAgency.Domain.dll
 C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.pdb
 C:\Users\user\source\repos\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.csprojAssemblyReference.cache
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\bin\Debug\net5.0\ServiceAgency.Domain.deps.json
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\bin\Debug\net5.0\ServiceAgency.Domain.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\bin\Debug\net5.0\ref\ServiceAgency.Domain.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\bin\Debug\net5.0\ServiceAgency.Domain.pdb
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ref\ServiceAgency.Domain.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.pdb
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Domain\obj\Debug\net5.0\ServiceAgency.Domain.csprojAssemblyReference.cache

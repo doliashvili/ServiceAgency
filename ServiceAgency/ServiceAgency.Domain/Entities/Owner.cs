@@ -11,6 +11,6 @@ namespace ServiceAgency.Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PrivateNumber { get; set; }
-        public bool IsActive { get; set; }
+        public List<Car> Cars { get; set; }
     }
 }

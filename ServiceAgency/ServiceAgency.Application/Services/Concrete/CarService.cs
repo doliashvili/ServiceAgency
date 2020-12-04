@@ -1,6 +1,7 @@
 ﻿using Domain.Extensions.Expression;
 using Microsoft.EntityFrameworkCore;
 using ServiceAgency.Application.Commands;
+using ServiceAgency.Application.Constants;
 using ServiceAgency.Application.Dtos;
 using ServiceAgency.Application.Queries;
 using ServiceAgency.Application.Services.Abstract;
@@ -75,17 +76,17 @@ namespace ServiceAgency.Application.Services.Concrete
             await _carRepository.AddAsync(carEntity);
         }
 
-        public async Task<CarOutputDto> GetCarByIdAsync(int id)
+        public async Task<CarOutputDto> GetCarByIdAsync(int id, string lang)
         {
             var car = await _carRepository.Queryable()
                   .Include(x => x.Color)
                   .Include(x => x.Fuel)
                   .Include(x => x.Owners).FirstOrDefaultAsync(x => x.Id == id);
 
-            return MapperCarToCarOutputDto(car);
+            return MapperCarToCarOutputDto(car, lang);
         }
 
-        public async Task<(IEnumerable<CarOutputDto>, int)> GetCarsAsync(GetCars query)
+        public async Task<(IEnumerable<CarOutputDto>, int)> GetCarsAsync(GetCars query, string lang)
         {
             var page = query.Page ?? 1 - 1;
             var pageSize = query.PageSize ?? 10;
@@ -105,7 +106,7 @@ namespace ServiceAgency.Application.Services.Concrete
 
             foreach (var car in cars)
             {
-                carInputDtos.Add(MapperCarToCarOutputDto(car));
+                carInputDtos.Add(MapperCarToCarOutputDto(car, lang));
             }
 
             (IEnumerable<CarOutputDto>, int) result = (carInputDtos, carsCount);
@@ -113,7 +114,7 @@ namespace ServiceAgency.Application.Services.Concrete
             return result;
         }
 
-        public async Task<(IEnumerable<CarOutputDto>, int)> GetSearchedCarsAsync(SearchCars query)
+        public async Task<(IEnumerable<CarOutputDto>, int)> GetSearchedCarsAsync(SearchCars query, string lang)
         {
             var page = query.Page ?? 1 - 1;
             var pageSize = query.PageSize ?? 10;
@@ -135,7 +136,7 @@ namespace ServiceAgency.Application.Services.Concrete
 
             foreach (var car in cars)
             {
-                carInputDtos.Add(MapperCarToCarOutputDto(car));
+                carInputDtos.Add(MapperCarToCarOutputDto(car, lang));
             }
 
             (IEnumerable<CarOutputDto>, int) result = (carInputDtos, carsCount);
@@ -169,7 +170,6 @@ namespace ServiceAgency.Application.Services.Concrete
         public async Task UpdateCarOwnerAsync(ChangeCarOwner changeCarOwner)
         {
             var owner = await _ownerRepository.FirstOrDefaultAsync(x => x.Id == changeCarOwner.OwnerId);
-            owner.IsActive = true;
             if (owner == null)
             {
                 throw new NotFoundException($"{changeCarOwner.OwnerId}");
@@ -183,11 +183,7 @@ namespace ServiceAgency.Application.Services.Concrete
                 throw new NotFoundException($"{changeCarOwner.CarId}");
             }
 
-            car.Owners.ForEach(x =>
-            {
-                x.IsActive = false;
-            });
-
+            car.ActiveOwnerId = owner.Id;
             car.Owners.Add(owner);
 
             await _carRepository.UpdateAsync(car);
@@ -254,7 +250,7 @@ namespace ServiceAgency.Application.Services.Concrete
             }
             if (query.OwnerId != null)
             {
-                expression = expression.And(x => x.Owners.FirstOrDefault(o => o.Id == query.OwnerId).IsActive);
+                expression = expression.And(x => x.Owners.FirstOrDefault(o => o.Id == query.OwnerId) != null);
             }
             if (query.TransportNumber != null)
             {
@@ -267,9 +263,9 @@ namespace ServiceAgency.Application.Services.Concrete
 
             return expression;
         }
-        private CarOutputDto MapperCarToCarOutputDto(Car car)
+        private CarOutputDto MapperCarToCarOutputDto(Car car, string lang)
         {
-            var owner = car.Owners.FirstOrDefault(x => x.IsActive = true);
+            var owner = car.Owners.FirstOrDefault(x => car.ActiveOwnerId == x.Id);
 
             var carOutputDto = new CarOutputDto
             {
@@ -279,15 +275,33 @@ namespace ServiceAgency.Application.Services.Concrete
                 Color = car.Color,
                 CreatedDate = car.CreatedDate,
                 Fuel = car.Fuel,
-                MarkEng = car.MarkEng,
-                MarkGeo = car.MarkGeo,
-                ModelEng = car.ModelEng,
-                ModelGeo = car.ModelGeo,
+                Mark = car.MarkGeo,
+                Model = car.ModelGeo,
                 TransportNumber = car.TransportNumber,
                 VinCode = car.VinCode
             };
 
+            if (lang.ToLower() == LanguageConstant.Eng)
+            {
+                carOutputDto = new CarOutputDto
+                {
+                    Image = car.Image,
+                    Owner = owner,
+                    ActiveOwnerId = owner.Id,
+                    Color = car.Color,
+                    CreatedDate = car.CreatedDate,
+                    Fuel = car.Fuel,
+                    Mark = car.MarkEng,
+                    Model = car.ModelEng,
+                    TransportNumber = car.TransportNumber,
+                    VinCode = car.VinCode
+                };
+
+                return carOutputDto;
+            }
+
             return carOutputDto;
+
         }
         private async Task<Color> AddColor(string color)
         {

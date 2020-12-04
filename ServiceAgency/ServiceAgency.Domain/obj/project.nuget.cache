@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mm+RRXUZi7qezUXT1Bv4PFrMVjumLyPn2ReRtrJdd+kCVTyxute8wvoWVXBO6/GFmpPz9Y9ZvYkupkKxG/ysfg==",
+  "dgSpecHash": "nXkaoIPKLcM6Prbtp3e+Yk8qdZxmp8OXtvpP5vXtbwvS9xJpxBb3NWO05kyb1Ge25kGptxaFfGYXcbDYqhRBEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Domain\\ServiceAgency.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

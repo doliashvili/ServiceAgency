@@ -5809,11 +5809,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj",
       "projectName": "ServiceAgency.Application",
-      "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Application\\ServiceAgency.Application.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Application\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5833,8 +5833,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\user\\source\\repos\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj"
+            "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\ServiceAgency\\ServiceAgency\\ServiceAgency\\ServiceAgency.Infrastructure\\ServiceAgency.Infrastructure.csproj"
             }
           }
         }
