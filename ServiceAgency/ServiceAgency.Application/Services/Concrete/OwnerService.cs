@@ -29,13 +29,26 @@ namespace ServiceAgency.Application.Services.Concrete
                 PrivateNumber = ownerInputDto.PrivateNumber
             };
 
-            await _baseRepository.AddAsync(ownerEntity);
+            try
+            {
+                await _baseRepository.AddAsync(ownerEntity);
+            }
+            catch (Exception e)
+            {
+                if (e.InnerException.Message.ToLower().Contains("Cannot insert duplicate key row in object".ToLower()))
+                    throw new PrivateNumberException("PrivateNumber is already exist !!!");
+            }
             return ownerEntity.Id;
         }
 
         public async Task DeleteOwnerAsync(int id)
         {
             await _baseRepository.DeleteByIdAsync(id);
+        }
+
+        public async Task<Owner> GetOwnerByPrivateNumber(string privateNumber)
+        {
+            return await _baseRepository.FirstOrDefaultAsync(x => x.PrivateNumber.ToLower() == privateNumber.ToLower());
         }
     }
 }

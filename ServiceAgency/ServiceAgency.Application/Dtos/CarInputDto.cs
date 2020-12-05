@@ -1,10 +1,6 @@
-﻿using ServiceAgency.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ServiceAgency.Application.Dtos
 {
@@ -30,12 +26,11 @@ namespace ServiceAgency.Application.Dtos
         public string TransportNumber { get; set; }
         [Required]
         [MaxLength(100)]
-        public DateTime CreatedDate { get; set; }
+        public string CreatedDate { get; set; }
         [Required]
         [MaxLength(100)]
         public string Image { get; set; }
         [Required]
-        [MaxLength(100)]
         public List<int> OwnersId { get; set; }
         [Required]
         [MaxLength(100)]
@@ -44,7 +39,6 @@ namespace ServiceAgency.Application.Dtos
         [MaxLength(100)]
         public string Fuel { get; set; }
         [Required]
-        [MaxLength(100)]
         public int ActiveOwnerId { get; set; }
     }
 }

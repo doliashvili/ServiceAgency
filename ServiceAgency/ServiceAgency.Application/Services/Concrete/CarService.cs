@@ -58,11 +58,16 @@ namespace ServiceAgency.Application.Services.Concrete
             }
 
 
+            if (!DateTime.TryParse(carInputDto.CreatedDate, out DateTime createdDate))
+            {
+                throw new DateTimeParseException("invalid datetime string");
+            }
+
             var carEntity = new Car
             {
                 Color = color,
                 Fuel = fuel,
-                CreatedDate = carInputDto.CreatedDate,
+                CreatedDate = createdDate,
                 VinCode = carInputDto.VinCode,
                 MarkEng = carInputDto.MarkEng,
                 MarkGeo = carInputDto.MarkGeo,
@@ -210,7 +215,13 @@ namespace ServiceAgency.Application.Services.Concrete
                  .Skip(page * pageSize)
                  .Take(pageSize);
 
-            CarOwnersOutputDto carOwnersOutputDto = new CarOwnersOutputDto { Owners = owners.ToList() };
+            var outputOwners = new List<OwnerOutPutDto>();
+            foreach (var owner in owners)
+            {
+                outputOwners.Add(MapperOwnerToOwnerOutputDto(owner));
+            }
+
+            CarOwnersOutputDto carOwnersOutputDto = new CarOwnersOutputDto { Owners = outputOwners, ActiveOwnerId = car.ActiveOwnerId };
 
             (CarOwnersOutputDto carOwnersPage, int allOwnersCount) result
                 = (carOwnersOutputDto, car.Owners.Count);
@@ -270,7 +281,12 @@ namespace ServiceAgency.Application.Services.Concrete
             var carOutputDto = new CarOutputDto
             {
                 Image = car.Image,
-                Owner = owner,
+                Owner = new OwnerOutPutDto
+                {
+                    FirstName = owner.FirstName,
+                    LastName = owner.LastName,
+                    PrivateNumber = owner.PrivateNumber
+                },
                 ActiveOwnerId = owner.Id,
                 Color = car.Color,
                 CreatedDate = car.CreatedDate,
@@ -286,7 +302,12 @@ namespace ServiceAgency.Application.Services.Concrete
                 carOutputDto = new CarOutputDto
                 {
                     Image = car.Image,
-                    Owner = owner,
+                    Owner = new OwnerOutPutDto
+                    {
+                        FirstName = owner.FirstName,
+                        LastName = owner.LastName,
+                        PrivateNumber = owner.PrivateNumber
+                    },
                     ActiveOwnerId = owner.Id,
                     Color = car.Color,
                     CreatedDate = car.CreatedDate,
@@ -302,6 +323,15 @@ namespace ServiceAgency.Application.Services.Concrete
 
             return carOutputDto;
 
+        }
+        private OwnerOutPutDto MapperOwnerToOwnerOutputDto(Owner owner)
+        {
+            return new OwnerOutPutDto
+            {
+                PrivateNumber = owner.PrivateNumber,
+                FirstName = owner.FirstName,
+                LastName = owner.LastName
+            };
         }
         private async Task<Color> AddColor(string color)
         {

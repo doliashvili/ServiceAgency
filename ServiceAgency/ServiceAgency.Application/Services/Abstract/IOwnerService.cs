@@ -1,4 +1,5 @@
 ﻿using ServiceAgency.Application.Dtos;
+using ServiceAgency.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace ServiceAgency.Application.Services.Abstract
     {
         Task<int> AddOwnerAsync(OwnerInputDto ownerInputDto);
         Task DeleteOwnerAsync(int id);
+        Task<Owner> GetOwnerByPrivateNumber(string privateNumber); 
     }
 }

@@ -9,6 +9,7 @@ namespace ServiceAgency.Application.Dtos
 {
     public class CarOwnersOutputDto 
     {
-        public List<Owner> Owners { get; set; }
+        public List<OwnerOutPutDto> Owners { get; set; }
+        public int ActiveOwnerId { get; set; }
     }
 }

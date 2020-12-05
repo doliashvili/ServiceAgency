@@ -5,19 +5,19 @@ namespace ServiceAgency.Application.Queries
 {
     public class SearchCars
     {
-        public string MarkGeo { get; private set; }
-        public string MarkEng { get; private set; }
-        public string ModelGeo { get; private set; }
-        public string ModelEng { get; private set; }
-        public string VinCode { get; private set; }
-        public string TransportNumber { get; private set; }
-        public DateTime? CreatedDate { get; private set; }
-        public string Color { get; private set; }
-        public string Fuel { get; private set; }
-        public int? OwnerId { get; private set; }
-        public int? Page { get; private set; }
-        public int? PageSize { get; private set; }
-        public bool OrderingDescending { get; private set; }
+        public string MarkGeo { get; set; }
+        public string MarkEng { get; set; }
+        public string ModelGeo { get; set; }
+        public string ModelEng { get; set; }
+        public string VinCode { get; set; }
+        public string TransportNumber { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public string Color { get; set; }
+        public string Fuel { get; set; }
+        public int? OwnerId { get; set; }
+        public int? Page { get; set; }
+        public int? PageSize { get; set; }
+        public bool OrderingDescending { get; set; }
         public SearchCars()
         {
 

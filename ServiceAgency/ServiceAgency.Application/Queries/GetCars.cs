@@ -9,8 +9,8 @@ namespace ServiceAgency.Application.Queries
 {
     public class GetCars
     {
-        public int? Page { get; private set; }
-        public int? PageSize { get; private set; }
+        public int? Page { get; set; }
+        public int? PageSize { get; set; }
 
 
         public GetCars()

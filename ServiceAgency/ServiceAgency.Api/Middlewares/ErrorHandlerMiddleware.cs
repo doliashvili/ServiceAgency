@@ -21,7 +21,7 @@ namespace ServiceAgency.Api.Middlewares
             _next = next;
         }
 
-        public async Task Invoke(HttpContext context,ILogger<ErrorHandlerMiddleware> logger)
+        public async Task Invoke(HttpContext context, ILogger<ErrorHandlerMiddleware> logger)
         {
             try
             {
@@ -44,6 +44,16 @@ namespace ServiceAgency.Api.Middlewares
                             responseModel.Errors.Add(e.Message);
                         break;
                     case ConcurrencyException e:
+                        response.StatusCode = (int)HttpStatusCode.Conflict;
+                        if (e.Message != null)
+                            responseModel.Errors.Add(e.Message);
+                        break;
+                    case DateTimeParseException e:
+                        response.StatusCode = (int)HttpStatusCode.BadRequest;
+                        if (e.Message != null)
+                            responseModel.Errors.Add(e.Message);
+                        break;
+                    case PrivateNumberException e:
                         response.StatusCode = (int)HttpStatusCode.Conflict;
                         if (e.Message != null)
                             responseModel.Errors.Add(e.Message);

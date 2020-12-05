@@ -17,6 +17,7 @@ namespace ServiceAgency.Infrastructure.Data.ModelConfigs
             builder.Property(x => x.FirstName).HasMaxLength(100);
             builder.Property(x => x.LastName).HasMaxLength(100);
             builder.Property(x => x.PrivateNumber).HasMaxLength(100);
+            builder.HasIndex(x => x.PrivateNumber).IsUnique();
         }
     }
 }

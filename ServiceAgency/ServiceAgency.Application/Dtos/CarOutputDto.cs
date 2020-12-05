@@ -15,7 +15,7 @@ namespace ServiceAgency.Application.Dtos
         public string TransportNumber { get; set; }
         public DateTime CreatedDate { get; set; }
         public string Image { get; set; }
-        public Owner Owner { get; set; }
+        public OwnerOutPutDto Owner { get; set; }
         public Color Color { get; set; }
         public Fuel Fuel { get; set; }
         public int ActiveOwnerId { get; set; }

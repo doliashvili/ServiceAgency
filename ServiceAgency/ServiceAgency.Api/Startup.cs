@@ -41,7 +41,11 @@ namespace ServiceAgency.Api
             services.AddTransient<IImageService, ImageService>();
             services.AddTransient<ICarService, CarService>();
 
-            services.AddControllers();
+            services.AddSwaggerGenNewtonsoftSupport();
+            services.AddControllers().AddNewtonsoftJson(c=> {
+                c.SerializerSettings.ConstructorHandling = Newtonsoft.Json.ConstructorHandling.AllowNonPublicDefaultConstructor;
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServiceAgency.Api", Version = "v1" });

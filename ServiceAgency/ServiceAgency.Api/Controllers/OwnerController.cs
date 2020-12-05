@@ -16,10 +16,10 @@ namespace ServiceAgency.Api.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> AddOwnerAsync([FromBody]OwnerInputDto ownerInputDto)
+        public async Task<IActionResult> AddOwnerAsync([FromBody] OwnerInputDto ownerInputDto)
         {
-            await _ownerService.AddOwnerAsync(ownerInputDto);
-            return Ok();
+            var id = await _ownerService.AddOwnerAsync(ownerInputDto);
+            return Ok(id);
         }
 
         [HttpDelete("[action]")]
@@ -29,5 +29,11 @@ namespace ServiceAgency.Api.Controllers
             return Ok();
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetOwnerByPrivateNumber(string privateNumber)
+        {
+            var owner = await _ownerService.GetOwnerByPrivateNumber(privateNumber);
+            return Ok(owner);
+        }
     }
 }

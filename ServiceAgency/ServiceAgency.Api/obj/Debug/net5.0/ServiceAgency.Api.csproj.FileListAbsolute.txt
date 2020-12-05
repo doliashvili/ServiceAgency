@@ -130,3 +130,8 @@ C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Ap
 C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\obj\Debug\net5.0\ServiceAgency.Api.RazorTargetAssemblyInfo.cache
 C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\obj\Debug\net5.0\ServiceAgency.Api.csproj.CopyComplete
 C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\obj\Debug\net5.0\ServiceAgency.Api.genruntimeconfig.cache
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\user\Desktop\ServiceAgency\ServiceAgency\ServiceAgency\ServiceAgency.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Newtonsoft.dll

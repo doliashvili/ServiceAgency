@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ServiceAgency.Application.Queries
 {
-    public class GetCarOwners 
+    public class GetCarOwners
     {
-        public int CarId { get; private set; }
+        public int CarId { get; set; }
         public int? Page { get; set; }
         public int? PageSize { get; set; }
         public GetCarOwners()
